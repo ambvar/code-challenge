@@ -4,7 +4,7 @@ Here is the completed application for the Rivet Coding Challenge.
 
 ### To Open the Application
 
-Enter the root folder and use `npm start`
+Enter the root folder and use `npm install` then `npm start`
 
 ### Notes/Thoughts I had while making this
 
