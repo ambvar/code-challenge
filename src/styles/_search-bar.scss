@@ -1,0 +1,24 @@
+.search-bar {
+  margin: 25px 50px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+
+  input {
+    font-size: 16px;
+  }
+
+  button.add-user {
+    border: none;
+    background-color: #F05237;
+    padding: 7px 15px;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+    outline-width: 0px;
+  }
+
+  button:hover {
+    background-color: #b6170c;
+  }
+}

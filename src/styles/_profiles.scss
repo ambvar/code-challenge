@@ -1,0 +1,32 @@
+ul.profiles {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0 40px;
+  padding: 0;
+
+  li {
+    width: 20%;
+    min-width: 200px;
+    max-width: 300px;
+  }
+}
+
+.preview {
+  margin: 10px;
+  padding: 10px;
+  border: 1px grey solid;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0.5px 0.5px 3px grey;
+  cursor: pointer;
+
+  .preview-image {
+    border-radius: 50%;
+    width: 70px;
+  }
+  
+  .contact-information {
+    font-size: 13px;
+  }
+}

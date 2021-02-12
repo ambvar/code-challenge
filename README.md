@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+### Rivet Code Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Here is the completed application for the Rivet Coding Challenge.
 
-## Available Scripts
+### To Open the Application
 
-In the project directory, you can run:
+Enter the root folder and use `npm start`
 
-### `npm start`
+### Notes/Thoughts I had while making this
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- I really wanted to add a file upload using S3. The only reason it is not there is because I realized too late that having access to the backend to generate a presigned URL to upload the files was not possible (unless I whipped up an API and self-hosted it just for that purpose).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- My frontend skills took a minute to get refreshed and I realized there were a HANDFUL of items I would have loved put in if I could have accessed my frontend memories earlier. Some of those additional features are the following:
+  * Fly out notification when there is a successfull/error when submitting the form
+  * Loading icons (who doesn't love a good loading icon?)
+  * A functional search/filter/display option; with the addition of more users to make my current application scalable, it would be essential to have something to filter users
 
-### `npm test`
+- I did not end up using Redux (big regret)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I did not end up using the endpoint to grab a single user because I found with a single page application, passing the user information along in the props for the ProfileModal and Form component. However, after thinking it through, that is not a good idea because someone could have the profiles open one day, leaving it open for 3 days, and go to edit the user not realizing the content has already been updated since the only time profiles are updates on the main page.

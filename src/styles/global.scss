@@ -1,0 +1,47 @@
+@import "./header";
+@import "./profile-modal";
+@import "./profiles";
+@import "./search-bar";
+@import "./user-profile";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 300;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input[type="text"], input[type="phone"], input[type="email"]  {
+  border: 0;
+  border-bottom: 1px solid #002345;
+  outline: none; 
+}
+
+input[type="submit"] {
+  border: none;
+  background-color: #F05237;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  outline-width: 0px;
+}
+
+input[type="text"]:focus, input[type="phone"]:focus, input[type="email"]:focus {
+  border-bottom: 1px solid #F05237 !important;
+}
+
+input[type="submit"]:hover {
+  background-color: #b6170c;
+}
+
+input.invalid {
+  border-bottom: 1px solid red;
+}

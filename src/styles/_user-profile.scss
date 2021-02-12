@@ -1,0 +1,43 @@
+h3 {
+  margin-left: 15px;
+  cursor: pointer;
+}
+.edit-user {
+  margin: 0 40px;
+
+  form {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+    width: 70%;
+
+    .form-element {
+      display: flex;
+      flex-flow: column;
+      width: 35%;
+      margin: 10px;
+
+      label {
+        font-size: 14px;
+        font-weight: 200;
+        margin-bottom: 5px;
+      }
+
+      .error {
+        border-bottom: 1px solid red;
+      }
+
+      .valid {
+        border-bottom: 1px solid #002345;
+      }
+    }
+  }
+
+  .form-submit {
+    margin: 30px 10px;
+  }
+
+  .error-message {
+    margin: 10px 10px;
+  }
+}
