@@ -18,3 +18,5 @@ Enter the root folder and use `npm install` then `npm start`
 - I did not end up using Redux (big regret)
 
 - I did not end up using the endpoint to grab a single user because I found with a single page application, passing the user information along in the props for the ProfileModal and Form component. However, after thinking it through, that is not a good idea because someone could have the profiles open one day, leaving it open for 3 days, and go to edit the user not realizing the content has already been updated since the only time profiles are updates on the main page.
+
+- After the photo URL is added, I think a nice touch would have been a preview of the image.
