@@ -1,11 +1,12 @@
-.search-bar {
+.actions-bar {
   margin: 25px 50px;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
 
-  input {
-    font-size: 16px;
+  h2 {
+    margin: 0;
+    font-weight: 300;
   }
 
   button.add-user {

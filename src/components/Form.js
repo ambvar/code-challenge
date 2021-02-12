@@ -201,6 +201,17 @@ class Form extends React.Component {
               />
             </div>
             <div className="form-element">
+              <label>Photo URL</label>
+              <input
+                type="text"
+                name="photo"
+                value={this.state.photo}
+                onChange={this.handleInputChange}
+                placeholder="https://bit.ly/3rPCabG"
+              />
+            </div>
+            <br />
+            <div className="form-element">
               <label>Notes</label>
               <textarea name="notes" value={this.state.notes}
                 onChange={this.handleInputChange}/>
