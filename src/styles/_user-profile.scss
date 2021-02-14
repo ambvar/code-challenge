@@ -5,10 +5,23 @@ h3 {
 .edit-user {
   margin: 0px 60px;
 
+  .image-preview {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+
   form {
     display: flex;
     flex-flow: row wrap;
     align-content: space-around;
+    justify-content: center;
 
     .form-element {
       display: flex;

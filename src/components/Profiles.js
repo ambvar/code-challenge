@@ -2,7 +2,7 @@ import React from "react";
 import Preview from "./Preview";
 import ProfileModal from "./ProfileModal";
 import UserProfile from "./UserProfile";
-import SearchBar from './SearchBar';
+import ActionsBar from './ActionsBar';
 import api from '../services/api';
 
 class Profiles extends React.Component {
@@ -10,6 +10,7 @@ class Profiles extends React.Component {
     super(props);
     this.state = {
       users: [],
+      allUsers: [],
       showModal: false,
       previewUser: {},
       edit: false,
@@ -27,7 +28,7 @@ class Profiles extends React.Component {
   componentDidMount() {
     api.get('/profiles/').then(
       (res) => { 
-        this.setState({ users: res }); 
+        this.setState({ users: res, allUsers: res }); 
       }
     );
   }
@@ -79,9 +80,9 @@ class Profiles extends React.Component {
     } else {
       return (
         <div>
-          <SearchBar
+          <ActionsBar
             createUser={ this.createUser }
-            users={ this.state.users }
+            users={ this.state.allUsers }
             filtered={ (filtered) => this.filter(filtered) }
           />
           <ul className="profiles">

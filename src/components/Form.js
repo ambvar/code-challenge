@@ -46,7 +46,7 @@ class Form extends React.Component {
         errorKeys.push(key);
       }
 
-      let reg = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/;
+      let reg = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
       if (key === 'phone' && !reg.exec(input[key])) {
         this.setState({ phoneError: "Please use a valid phone number." });
         errorKeys.push(key);
@@ -79,13 +79,13 @@ class Form extends React.Component {
         notes: this.state.notes
       }
       if (this.props.create) {
-        api.post('/profile', data).then(
-          (res) => {
-            console.log(res);
-            this.props.success();
-          }
-        );
-        this.props.success();
+        // api.post('/profile', data).then(
+        //   (res) => {
+        //     console.log(res);
+        //     this.props.success();
+        //   }
+        // );
+        // this.props.success();
       } else {
         api.put('/profile/' + this.state.id, data).then(
           (res) => {
@@ -105,6 +105,9 @@ class Form extends React.Component {
       <div>
         <div className="edit-user">
           <h2>{ title }</h2>
+          <div className="image-preview">
+            <img src={ this.state.photo || "./images/profile-image.jpeg" }></img>
+          </div>
           <form>
             <div className="form-element">
               <label>First Name</label>
@@ -145,7 +148,7 @@ class Form extends React.Component {
             <div className="form-element">
               <label>Phone Number</label>
               <input
-                type="phone"
+                type="text"
                 name="phone"
                 value={this.state.phone}
                 onChange={this.handleInputChange}
