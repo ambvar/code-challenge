@@ -41,7 +41,7 @@ class Form extends React.Component {
     const keys = ['firstName', 'lastName', 'email', 'address', 'city', 'state', 'zip', 'phone'];
     const errorKeys = [];
     for (const key in input) {
-      if (keys.includes(key) && input[key] === "") {
+      if (keys.includes(key) && input[key].trim() === "") {
         this.setState({ requiredError: "Required field missing." });
         errorKeys.push(key);
       }
@@ -67,9 +67,9 @@ class Form extends React.Component {
     const valid = this.validate(this.state);
     if (valid) {
       const data = {
-        first_name: this.state.firstName,
-        last_name: this.state.lastName,
-        email: this.state.email,
+        first_name: this.state.firstName.trim(),
+        last_name: this.state.lastName.trim(),
+        email: this.state.email.trim(),
         phone: this.state.phone,
         address: this.state.address,
         city: this.state.city,
@@ -79,13 +79,13 @@ class Form extends React.Component {
         notes: this.state.notes
       }
       if (this.props.create) {
-        // api.post('/profile', data).then(
-        //   (res) => {
-        //     console.log(res);
-        //     this.props.success();
-        //   }
-        // );
-        // this.props.success();
+        api.post('/profile', data).then(
+          (res) => {
+            console.log(res);
+            this.props.success();
+          }
+        );
+        this.props.success();
       } else {
         api.put('/profile/' + this.state.id, data).then(
           (res) => {

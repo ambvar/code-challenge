@@ -30,3 +30,5 @@ Enter the root folder and use `npm install` then `npm start`
 - Updated some styles including the user modal's image being stretched :')
 
 - Added an image preview for creating/updating user so you can see what the image looks like
+
+- Added trim to not allow whitespace through
