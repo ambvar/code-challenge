@@ -27,10 +27,10 @@ class ActionsBar extends React.Component {
     }
 
     const filter = this.state.users.filter(user => 
-      user.first_name.toLowerCase().includes(firstName.toLowerCase()) &&
-      user.last_name.toLowerCase().includes(lastName.toLowerCase()) ||
-      user.first_name.toLowerCase().includes(lastName.toLowerCase()) &&
-      user.last_name.toLowerCase().includes(firstName.toLowerCase())
+      (user.first_name.toLowerCase().includes(firstName.toLowerCase()) &&
+      user.last_name.toLowerCase().includes(lastName.toLowerCase())) ||
+      (user.first_name.toLowerCase().includes(lastName.toLowerCase()) &&
+      user.last_name.toLowerCase().includes(firstName.toLowerCase()))
     );
 
     return this.props.filtered(filter);

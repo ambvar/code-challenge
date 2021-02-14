@@ -106,7 +106,7 @@ class Form extends React.Component {
         <div className="edit-user">
           <h2>{ title }</h2>
           <div className="image-preview">
-            <img src={ this.state.photo || "./images/profile-image.jpeg" }></img>
+            <img src={ this.state.photo || "./images/profile-image.jpeg" } alt="preview"></img>
           </div>
           <form>
             <div className="form-element">
