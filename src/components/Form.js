@@ -70,11 +70,11 @@ class Form extends React.Component {
         first_name: this.state.firstName.trim(),
         last_name: this.state.lastName.trim(),
         email: this.state.email.trim(),
-        phone: this.state.phone,
-        address: this.state.address,
-        city: this.state.city,
-        state: this.state.state,
-        zip: this.state.zip,
+        phone: this.state.phone.trim(),
+        address: this.state.address.trim(),
+        city: this.state.city.trim(),
+        state: this.state.state.trim(),
+        zip: this.state.zip.trim(),
         photo: this.state.photo,
         notes: this.state.notes
       }

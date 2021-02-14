@@ -13,7 +13,6 @@ class ActionsBar extends React.Component {
     this.setState({ users: this.props.users });
     const search = event.target.value;
     if (search === '' || !search) {
-      console.log('here?');
       return this.props.filtered(this.props.users);
     }
     let firstName = '';
